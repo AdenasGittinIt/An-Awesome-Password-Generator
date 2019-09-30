@@ -26,29 +26,3 @@ Acceptance Criteria
 GIVEN that a user needs a new, secure password
 WHEN prompted for password criteria
 THEN a password is generated
-
-
-
-Here's my psuedo code....
-I need a means by which the user can input their password criteria
-
-- Password length (8-128 characters)
-- I don’t want repeated characters
-- Whether or not special characters are allowed (yes, no)
-- Whether or not certain special character should be excluded (yes, no and which)
-- Should upper case letters be included (yes, no)
-- Should lower case letters be included (yes, no)
-
-Not all characters can sit in the same array since some are optional.
-
-I can have an object with multiple arrays in it or an array with multiple arrays in it.
-
-I need a method for randomly selecting these items from the array that they live in.
-
-I need a means by which I can return the resulting password to the user.  
-
-I need a button that the user can click that will save the password to their clipboard
-
-I want to include some sort of unexpected animation to challenge myself, distinguish myself and make a mundane task interesting and perhaps a little fun.
-
-I need to style the app so that it looks good on multiple screen sizes.
