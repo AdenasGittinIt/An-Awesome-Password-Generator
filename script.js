@@ -31,13 +31,15 @@ function getRandom(arr) {
   return arr[random1][Math.floor((Math.random() * (arr[random1].length)))];
 }
 
+//The below for loop produces a random password coposed of randome characters from the four arrays in the userOptions array
+//I need to either add more fuctions or more variables to so that unwanted characters will be excluded.  
+
 for (i = 0; i < userNeeds; i++) {
   // var randomNumber = Math.floor(Math.random() * lettersArray.length);  
   var includeRandomNum = Math.floor(Math.random() * numbersArray.length);
   var includeSpecChars = Math.floor(Math.random() * specChars.length);
   var includeUpperCase = Math.floor(Math.random() * upperAlpha.length);
   var includeLowerCase = Math.floor(Math.random() * lowerAlpha.length);
-
 
   if (passWord.length >= userNeeds) {
     break;
@@ -46,14 +48,15 @@ for (i = 0; i < userNeeds; i++) {
 if (userNeedsSpec && userNeedsNum && upperCase && lowerCase){
   passWord += getRandom(userOptions);
 }
+console.log(passWord);
 
-  // if (userNeedsSpec) {
-  //   passWord += specChars[includeSpecChars];
-  // } 
-  // console.log(passWord);
-  // if (passWord.length >= userNeeds) {
-  //   break;
-  // }
+  if (!userNeedsSpec) {
+    passWord += specChars[includeSpecChars];
+  } 
+  console.log(passWord);
+  if (passWord.length >= userNeeds) {
+    break;
+  }
   
   // if (userNeedsNum){
   //   passWord += includeRandomNum; 
